@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Interceptors", "EntityFramework.Interceptors\EntityFramework.Interceptors.csproj", "{608F5910-86AF-497D-A34D-FE7988FAE41C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.Interceptors.Tests", "EntityFramework.Interceptors.Tests\EntityFramework.Interceptors.Tests.csproj", "{E449C4E2-B279-42F9-B0A7-DC35A363F2FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{608F5910-86AF-497D-A34D-FE7988FAE41C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{608F5910-86AF-497D-A34D-FE7988FAE41C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{608F5910-86AF-497D-A34D-FE7988FAE41C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{608F5910-86AF-497D-A34D-FE7988FAE41C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E449C4E2-B279-42F9-B0A7-DC35A363F2FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E449C4E2-B279-42F9-B0A7-DC35A363F2FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E449C4E2-B279-42F9-B0A7-DC35A363F2FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E449C4E2-B279-42F9-B0A7-DC35A363F2FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5EE4FCA7-8B14-4C2F-A943-A146058CC153}
+	EndGlobalSection
+EndGlobal
