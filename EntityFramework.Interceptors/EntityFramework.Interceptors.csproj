@@ -51,7 +51,7 @@
     <Compile Include="HintDbCommandInterceptor.cs" />
     <Compile Include="HintDbContext.cs" />
     <Compile Include="QueryHint.cs" />
-    <Compile Include="Hints\UseIndexOnHint.cs" />
+    <Compile Include="Hints\MySqlUseIndexHint.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="QueryExtensions.cs" />
   </ItemGroup>

@@ -8,14 +8,15 @@ namespace EntityFramework.Interceptors
 {
     public enum QueryHintType
     {
-        UseIndexOn = 0
+        UseIndex = 0
     }
 
     public abstract class QueryHint
     {
-        protected QueryHint(QueryHintType type)
+        protected QueryHint(QueryHintType type, string tableName)
         {
             this.Type = type;
+            this.TableName = tableName;
         }
         public string TableName { get; set; }
         public QueryHintType Type { get; private set; }
