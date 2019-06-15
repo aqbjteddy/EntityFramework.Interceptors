@@ -9,17 +9,25 @@ using System.Threading.Tasks;
 
 namespace EntityFramework
 {
-    public class HintDbContext : DbContext
+    public interface IHintDbContext
     {
-        static HintDbContext()
+        HintAccessor HintAssessor { get; }
+    }
+
+    public class HintAccessor
+    {
+        static HintAccessor()
         {
             DbInterception.Add(new HintDbCommandInterceptor());
         }
 
-        public HintDbContext() { }
-        public HintDbContext(string nameOrConnectionString) : base(nameOrConnectionString) { }
-
         private List<QueryHint> _hints = new List<QueryHint>();
+
+        public HintAccessor()
+        {
+
+        }
+
         public void AddHint(QueryHint hint)
         {
             _hints.Add(hint);

@@ -12,16 +12,15 @@ namespace EntityFramework.Interceptors
     {
         public override void ReaderExecuting(DbCommand command, DbCommandInterceptionContext<DbDataReader> interceptionContext)
         {
-            var context = interceptionContext.DbContexts.FirstOrDefault(x => x is HintDbContext);
+            var context = interceptionContext.DbContexts.FirstOrDefault(x => x is IHintDbContext);
             if (context != null)
             {
-                var hintContext = context as HintDbContext;
-                var hints = hintContext.GetHints();
+                var hintContext = context as IHintDbContext;
+                var hints = hintContext.HintAssessor.GetHints();
                 foreach (var hint in hints)
                 {
                     command.CommandText = hint.Replace(command.CommandText);
                 }
-                hintContext.ClearHints();
             }
         }
     }

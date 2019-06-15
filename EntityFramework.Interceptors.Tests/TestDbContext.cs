@@ -25,7 +25,7 @@ namespace EntityFramework.Interceptors.Tests
         }
     }
 
-    public class TestDbContext : HintDbContext
+    public class TestDbContext : DbContext, IHintDbContext
     {
         static TestDbContext()
         {
@@ -35,6 +35,8 @@ namespace EntityFramework.Interceptors.Tests
         public TestDbContext() : base("DefaultConnection") { }
 
         public DbSet<Product> Products { get; set; }
+        private HintAccessor _hintAssessor = new HintAccessor();
+        public HintAccessor HintAssessor { get => _hintAssessor; }
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {

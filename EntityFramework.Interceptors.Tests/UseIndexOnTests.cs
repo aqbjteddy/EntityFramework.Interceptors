@@ -14,7 +14,7 @@ namespace EntityFramework.Interceptors.Tests
         public void ShouldHitUseIndexOn()
         {
             var context = new TestDbContext();
-            var products = context.UseIndexOn<Product>("IX_RegionCode").ToList();
+            var products = context.UseIndex<Product>("IX_RegionCode").ToList();
         }
     }
 }
